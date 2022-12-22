@@ -12,12 +12,21 @@
 <body>
     <div class="main">
         <div class="Title">
-            <h2>
+            <h1>
                 Number Guessing Game
-            </h2>
+            </h1>
         </div>
         <div class="description">
-            We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low
+            <p class="text">
+                We have selected a random number between 1 and 100.
+            </p>
+            <p class="text">
+                See if you can guess it in 10 turns or fewer.
+            <p class="text">
+                We'll tell you if your guess was too high or too low.
+            </p>
+            
+            
         </div>
         <div class="Field">
             <div class="Text">
@@ -26,9 +35,11 @@
             <div class="input">
                 <input type="number" min="1" max="100" class="guess">
             </div>
-            <button>
+            <div class="button">
+            <button id="but">
                 Submit guess
             </button>
+            </div>
         </div>
         <div>
             <p class="Prev">
@@ -42,7 +53,7 @@
         </div>
         <div>
             <p class="low">
-                
+
             </p>
         </div>
     </div>

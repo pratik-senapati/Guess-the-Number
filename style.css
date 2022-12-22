@@ -1,0 +1,55 @@
+.main
+{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+
+}
+
+.Title
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    
+}
+
+.text
+{
+    padding:0;
+    margin:0;
+    
+    white-space: nowrap;
+}
+
+.description
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+   flex-wrap: nowrap;
+    margin-bottom: 1rem;
+    max-width: auto;
+    min-width: 5rem;
+    font-size: 1.5rem;
+}
+
+.Field
+{
+    display: flex;
+    justify-content: center;
+}
+
+.input 
+{
+    padding-left:10px;
+}
+
+.button
+{
+    padding-left: 10px;
+}
