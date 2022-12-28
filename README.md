@@ -1,4 +1,4 @@
 # Guess-the-Number
 A simple Guess the Number game with JS 
-Website;
+Website:
 https://crimsontypo.github.io/Guess-the-Number/
