@@ -3,54 +3,60 @@
 //start game on reloading and on cicking button
 
 let num=Math.floor(Math.random()*100)+1;
+num=34;
 let submit=document.querySelector("#but");
 let g=document.querySelector(".guess");
 let l=document.querySelector(".lohi");
 let correct=document.querySelector(".correct");
 let gander=document.querySelector(".guesses");
+let m=document.querySelector(".main");
 let resetbutton;
 let gc=1;
-console.log("bruh");
+
 
 
 function checkguess()
 {
-    let guess=Number(submit.value);
+    let guess=Number(g.value);
     if(gc==1)
     {
         gander.textContent="Previous Guesses:";
     }
-    gander+=`${guess} `;
-    if(gc>10)
+    gander.textContent+= guess + ' ';
+    if(gc<10)
     {   
         if(num==guess)
         {
             correct.textContent="You're correct!";
-            correct.style.backgroundColor='green';
-            lohi.textContent='';
+            document.body.style.backgroundColor='#90EE90';
+            l.textContent='';
+            setgameover();
+        }
+        else if(num<guess)
+        {
+            correct.textContent="Incorrect Guess!";
+            document.body.style.backgroundColor='#ff8886';
+            l.textContent=`Your last guess ${guess} was too high!`;
+            gc++;
+            console.log(45);
+
         }
         else if(num>guess)
         {
             correct.textContent="Incorrect Guess!";
-            correct.style.backgroundColor='red';
-            lohi.textContent=`Your last guess ${guess} was too high!`;
-            gc++;
-
-        }
-        else
-        {
-            correct.textContent="Incorrect Guess!";
-            correct.style.backgroundColor='red';
-            lohi.textContent=`Your last guess ${guess} was too low!`;
+            document.body.style.backgroundColor='#ff8886';
+            
+            l.textContent=`Your last guess ${guess} was too low!`;
             gc++;
         }
     }
     else if(gc==10)
     {
         correct.textContent="GAME OVER! TRY AGAIN!";
-        correct.style.backgroundColor='red';
-        lohi.textContent='';
+        document.body.style.backgroundColor='#ff8886';
+        l.textContent='';
         setgameover();
+        
 
     }
 }
@@ -63,12 +69,11 @@ function setgameover()
     g.disabled=true;
     resetbutton=document.createElement('button');
     resetbutton.textContent="Start New Game";
-    document.body.appendChild(resetbutton);
-    resetbutton('click', resetgame);
+    m.appendChild(resetbutton);
+    resetbutton.addEventListener('click', resetgame);
 }
 
 function resetgame()
 {
-    gc=1;
-    document.location.reload();
+    location.reload();
 }
