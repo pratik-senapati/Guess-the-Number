@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.jss">
+    <script defer src="script.js" >
     </script>
 </head>
 <body>
@@ -36,25 +36,19 @@
                 <input type="number" min="1" max="100" class="guess">
             </div>
             <div class="button">
-            <button id="but">
-                Submit guess
-            </button>
+            <input type="submit" value="Submit Guess" id="but">
             </div>
         </div>
-        <div>
-            <p class="Prev">
-
-            </p>
-        </div>
-        <div>
-            <p class="cor">
-
-            </p>
-        </div>
-        <div>
-            <p class="low">
-
-            </p>
+        <div class="description" id="form">
+                <p class="guesses">
+                    guesses
+                </p>
+                <p class="correct">
+                    correct
+                </p>
+                <p class="lohi">
+                    lohi
+                </p>
         </div>
     </div>
     
